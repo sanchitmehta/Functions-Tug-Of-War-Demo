@@ -55,6 +55,12 @@
             },
             "backendUri": "https://funcdemostorage1.blob.core.windows.net/staticfiles/{restOfPath}.png"
         },
+	"css": {
+            "matchCondition": {
+                "route": "/{restOfPath}.css"
+            },
+            "backendUri": "https://funcdemostorage1.blob.core.windows.net/staticfiles/{restOfPath}.css"
+        },
         "default": {
             "matchCondition": {
                 "route": "/",
