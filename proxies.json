@@ -1,0 +1,68 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "getscores": {
+            "matchCondition": {
+                "route": "getscores",
+                "methods": [
+                    "POST"
+                ]
+            },
+            "backendUri": "https://%WEBSITE_HOSTNAME%/api/GetScore"
+        },
+        "incrementpoint": {
+            "matchCondition": {
+                "route": "incrementpoint",
+                "methods": [
+                    "POST"
+                ]
+            },
+            "backendUri": "https://%WEBSITE_HOSTNAME%/api/IncrementPointTrigger"
+        },
+        "createteams": {
+            "matchCondition": {
+                "route": "/createteams",
+                "methods": [
+                    "POST"
+                ]
+            },
+            "backendUri": "https://%WEBSITE_HOSTNAME%/api/CreateTeamSettings"
+        },
+        "getsettings": {
+            "matchCondition": {
+                "route": "/getteamsettings",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "backendUri": "https://%WEBSITE_HOSTNAME%/api/GetTeamSettings"
+        },
+        "html": {
+            "matchCondition": {
+                "route": "/{restOfPath}.html"
+            },
+            "backendUri": "https://funcdemostorage1.blob.core.windows.net/staticfiles/{restOfPath}.html"
+        },
+        "js": {
+            "matchCondition": {
+                "route": "/{restOfPath}.js"
+            },
+            "backendUri": "https://funcdemostorage1.blob.core.windows.net/staticfiles/{restOfPath}.js"
+        },
+        "png": {
+            "matchCondition": {
+                "route": "/{restOfPath}.png"
+            },
+            "backendUri": "https://funcdemostorage1.blob.core.windows.net/staticfiles/{restOfPath}.png"
+        },
+        "default": {
+            "matchCondition": {
+                "route": "/",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "backendUri": "https://funcdemostorage1.blob.core.windows.net/staticfiles/index.html"
+        }
+    }
+}
